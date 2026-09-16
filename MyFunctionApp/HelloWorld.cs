@@ -20,4 +20,13 @@ public class HelloWorld
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         return new OkObjectResult("Aidan Beck");
     }
+
+    [Function("GetAllUsers")]
+    public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = "users/getallusers")] HttpRequest req)
+    {
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        return new OkObjectResult("Aidan Beck, Carter Beck");
+    }
+
+
 }
