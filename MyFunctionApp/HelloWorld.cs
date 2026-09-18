@@ -14,19 +14,25 @@ public class HelloWorld
         _logger = logger;
     }
 
-    [Function("GetUserInfo")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+    [Function("GetUserInfo")] // define azure function
+    public IActionResult GetUserInfo([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req) // "Run" can be anything. 
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         return new OkObjectResult("Aidan Beck");
     }
 
     [Function("GetAllUsers")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = "users/getallusers")] HttpRequest req)
+    public IActionResult GetAllUsers([HttpTrigger(AuthorizationLevel.Function, "get", Route = "users/getallusers")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         return new OkObjectResult("Aidan Beck, Carter Beck");
     }
 
+    [Function("GetExternalServiceURL")]
+    public IActionResult GetExternalServiceURL([HttpTrigger(AuthorizationLevel.Function, "get", Route = "externalservice/getexternalserviceurl")] HttpRequest req)
+    {
+        var externalServiceUrl = Environment.GetEnvironmentVariable("SomeExternalService");
+        return new OkObjectResult(externalServiceUrl);
+    }
 
 }

@@ -6,6 +6,4 @@ Learning Azure Function Apps
 * func init MyFunctionApp --worker-runtime dotnet-isolated
 * cd MyFunctionApp
 * func new (Choose HttpTrigger)
-* func start
-    * Second time: func start --dotnet-isolated
-    * OR: dotnet run
+* dotnet run
