@@ -22,6 +22,7 @@ A traditional environment such as Visual Studio Code will be better, and I will 
 
 ### Deployment
 * Install Azure Functions Extension & Log In.
+* Open Multi-Root workspace.
 * Create Function App in Azure Portal.
 * File > Open Folder > Open Project Folder
 * Command Palette > Azure Functions: Deploy Function App

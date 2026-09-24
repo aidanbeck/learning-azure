@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "Repository",
+      "path": "."
+    },
+    {
+      "name": "JavaScript Functions",
+      "path": "javaScriptFunctions"
+    },
+    {
+      "name": "CSharp Functions",
+      "path": "cSharpFunctions"
+    }
+  ]
+}
